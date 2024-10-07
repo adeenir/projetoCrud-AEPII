@@ -19,6 +19,10 @@
             <id>mavenCentral</id>
             <url>https://repo1.maven.org/maven2/</url>
         </repository>
+        <repository>
+            <id>kotlin-nosql</id>
+            <url>http://repository.jetbrains.com/kotlin-nosql</url>
+        </repository>
     </repositories>
 
     <build>
@@ -87,6 +91,11 @@
             <groupId>com.google.code.gson</groupId>
             <artifactId>gson</artifactId>
             <version>2.11.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.mongodb</groupId>
+            <artifactId>mongodb-driver-kotlin-coroutine</artifactId>
+            <version>4.10.1</version>
         </dependency>
     </dependencies>
 
