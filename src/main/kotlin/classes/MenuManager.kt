@@ -15,7 +15,6 @@ class MenuManager {
     }
 
     fun showMenu() {
-        this.clearConsole()
         println("\t\tSeja bem-vindo ao sistema!")
         
         println("""
@@ -27,7 +26,7 @@ class MenuManager {
         """.trimIndent())
         
         println("\nInforme uma opção:")
-        this.menuOptionSelected = readLine()?.toIntOrNull() ?: 0
+        this.menuOptionSelected = readLine()?.toIntOrNull()!!
         
         while (this.menuOptionSelected != 0) {
             when (this.menuOptionSelected) {
@@ -44,19 +43,9 @@ class MenuManager {
             
             println("\nPressione enter para continuar...")
             readLine()
-            this.clearConsole()
             
             this.showMenu()
         }
-    }
-
-    private fun clearConsole() {
-        val os: String = System.getProperty("os.name")
-
-        if (System.getProperty("os.name").contains("Windows"))
-            ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
-        else
-            Runtime.getRuntime().exec("clear");
     }
 
     private fun listEvents() {
