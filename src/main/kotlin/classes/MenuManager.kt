@@ -16,13 +16,6 @@ class MenuManager {
 
     fun showMenu() {
         this.clearConsole()
-        println("""
-     _    ____  _____ _   _ ___ ____  
-    / \  |  _ \| ____| \ | |_ _|  _ \ 
-   / _ \ | | | |  _| |  \| || || |_) |
-  / ___ \| |_| | |___| |\  || ||  _ < 
- /_/   \_\____/|_____|_| \_|___|_| \_\
-        """.trimIndent())
         println("\t\tSeja bem-vindo ao sistema!")
         
         println("""

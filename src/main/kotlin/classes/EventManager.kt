@@ -35,7 +35,6 @@ class EventManager {
     
     fun getEvents(): JsonArray? {
         eventsArray.sortedByDescending { it.asJsonObject.get("date").asString }
-
         this._logger.registerLog("Listou todos os eventos existentes")
         
         return eventsArray
@@ -61,7 +60,6 @@ class EventManager {
     }
     
     fun deleteEvent(id: Int): Int {
-        println(eventsArray[id])
         if (eventsArray[id] !== null) {
             val eventName: String = eventsArray[id].asJsonObject.get("name").asString
             
